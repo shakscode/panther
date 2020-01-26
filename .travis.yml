@@ -9,7 +9,7 @@ deploy:
   provider: elasticbeanstalk
   region: "ap-south-1"
   app: "panther"
-  env: "e-jikjjeqhxt"
+  env: "panther-env"
   bucket_name: "elasticbeanstalk-ap-south-1-541340610614"
   bucket_path:  "panther"
   on:
