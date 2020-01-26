@@ -5,3 +5,14 @@ before_install:
   - docker build -t panther/npmstart -f dockerfile.dev .
 script:
  - docker run -e CI=true panther/npmstart npm run test -- --coverage
+deploy:
+  provider: elasticbeanstalk
+  region: "ap-south-1"
+  app: "panther"
+  env: "e-jikjjeqhxt"
+  bucket_name: "elasticbeanstalk-ap-south-1-541340610614"
+  bucket_path:  "panther"
+  on:
+    branch: master
+  access_key_id: AKIAX4CTKGA3P2DIHE4K
+  secret_access_key: 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
