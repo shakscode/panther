@@ -7,10 +7,10 @@ script:
  - docker run -e CI=true panther/npmstart npm run test -- --coverage
 deploy:
   provider: elasticbeanstalk
-  region: "ap-south-1"
+  region: "us-east-2"
   app: "panther"
   env: "panther-env"
-  bucket_name: "elasticbeanstalk-ap-south-1-541340610614"
+  bucket_name: "elasticbeanstalk-us-east-2-579837917155"
   bucket_path:  "panther"
   on:
     branch: master
